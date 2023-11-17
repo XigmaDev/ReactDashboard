@@ -1,28 +1,21 @@
 import React from "react";
-
+import WebSiteTraffic from "./tiles/website-traffic";
+import FullReport from "./tiles/full-report";
+import Bouncerate from "./tiles/bouncerate";
+import Roi from "./tiles/roi";
+import Webscore from "./tiles/webscore";
+import CustomerChurn from "./tiles/customerchurn";
 
 export default function Maincontent() {
   return (
-    <div className="w-full p-4 h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-28">
-      <div className="bg-white p-4 rounded-md shadow-md">
+    <div className="flex flex-wrap justify-evenly p-4">
+      <WebSiteTraffic/>
+      <FullReport />
+      <Bouncerate />
+      <Roi />
+      <Webscore />
+      <CustomerChurn />
 
-      </div>
-      <div className="bg-white p-4 rounded-md shadow-md">
-        
-      </div>
-      <div className="bg-white p-4 rounded-md shadow-md">
-        
-      </div>
-      <div className="bg-white p-4 rounded-md shadow-md">
-        
-      </div>
-      <div className="bg-white p-4 rounded-md shadow-md">
-        
-      </div>
-      <div className="bg-white p-4 rounded-md shadow-md">
-        
-      </div>
-      
     </div>
   );
 }

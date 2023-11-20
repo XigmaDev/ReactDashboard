@@ -19,7 +19,6 @@ function Dashboard() {
           <MainNavbar
             theme={theme}
           />
-          <MainNavbar />
           <Maincontent />
         </div>
       </div>

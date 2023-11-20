@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Maincontent from "./components/Layout/Maincontent";
-import NavbarDark from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import useDarkMode from "./useDarkMode";
-export default function Dashboard() {
 
-  const [isDarkMode, setIsDarkMode] = useState(true);
+
+function Dashboard() {
 
   const [theme, toggleTheme] = useDarkMode()
   return (
@@ -16,7 +16,7 @@ export default function Dashboard() {
         toggleTheme={toggleTheme}
         />
         <div className="w-5/6">
-          <NavbarDark 
+          <Navbar 
           theme={theme}
           />
           <Maincontent />
@@ -25,4 +25,4 @@ export default function Dashboard() {
     </div>
   );
 }
-
+export default Dashboard

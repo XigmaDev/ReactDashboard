@@ -5,7 +5,7 @@ export default function FullReport() {
 
 
     return (
-        <div className="bg-gray-800 p-4 rounded-3xl shadow-md w-96 mb-4 h-96 mr-3 flex flex-col justify-between">
+        <div className="bg-gray-800 p-4 rounded-3xl shadow-md w-96 mb-4 h-96 mr-3 flex flex-col justify-between bg-[url('grunge-texture.png')] bg-cover">
             <div className="px-6 py-4 flex flex-wrap justify-between">
                 <div className="text-white text-2xl font-semibold mb-2 p-4 ">Full Report</div>
                 <a className="py-3 text-sm  my-3 mx-4  px-4 transition-colors inline-block" href="#">

@@ -7,7 +7,7 @@ import {
     Input,
 } from "@material-tailwind/react";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
-export default function NavbarDark({ theme }) {
+function Navbar({ theme }) {
     return (
         <Navbar
 
@@ -34,7 +34,7 @@ export default function NavbarDark({ theme }) {
                         }}
                     />
                 </div>
-                <div className=" ml-auto flex gap-1 md:mr-4">
+                <div className="ml-auto flex gap-1 md:mr-4">
                     <IconButton variant="text" color={`${theme === 'dark' ? 'white' : 'black'}`}>
                         <Cog6ToothIcon className="h-4 w-4 " />
                     </IconButton>
@@ -47,3 +47,4 @@ export default function NavbarDark({ theme }) {
         </Navbar>
     );
 }
+export default Navbar

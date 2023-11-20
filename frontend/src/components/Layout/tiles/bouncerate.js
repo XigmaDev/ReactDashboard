@@ -55,11 +55,11 @@ export default function Bouncerate() {
                     <div className="flex flex-row justify-center p-4">
                         <div className="border-2 p-2 text-center rounded-xl w-20 m-2">
                             <div className="flex flex-col justify-between">
-                                <Typography variant="h7" color="blue-gray" className="mb-1">
+                                <Typography variant="h6" color="blue-gray" className="mb-1">
                                     Mon
                                 </Typography>
 
-                                <Typography variant="h7" color="blue-gray" className="mb-1 font-bold">
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
                                     2
                                 </Typography>
                             </div>
@@ -67,11 +67,11 @@ export default function Bouncerate() {
                         </div>
                         <div className="bg-yellow-300 p-2 text-center rounded-xl w-20 m-2">
                             <div className="flex flex-col justify-between">
-                                <Typography variant="h7" color="blue-gray" className="mb-1">
+                                <Typography variant="h6" color="blue-gray" className="mb-1">
                                     Tue
                                 </Typography>
 
-                                <Typography variant="h7" color="blue-gray" className="mb-1 font-bold">
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
                                     3
                                 </Typography>
                             </div>
@@ -79,11 +79,11 @@ export default function Bouncerate() {
                         </div>
                         <div className="border-2 p-2 text-center rounded-xl w-20 m-2">
                             <div className="flex flex-col justify-between">
-                                <Typography variant="h7" color="blue-gray" className="mb-1">
+                                <Typography variant="h6" color="blue-gray" className="mb-1">
                                     Wed
                                 </Typography>
 
-                                <Typography variant="h7" color="blue-gray" className="mb-1 font-bold">
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
                                     4
                                 </Typography>
                             </div>
@@ -94,13 +94,13 @@ export default function Bouncerate() {
                         <Typography variant="h1" color="blue-gray" className="mb-1">
                             23%
                         </Typography>
-                        <div class="border-l-2 border-gray-400 h-20 "></div>
+                        <div className="border-l-2 border-gray-400 h-20 "></div>
                         <div className="flex flex-col justify-center">
-                            <Typography variant="h7" color="blue-gray" className="mb-1 font-bold">
+                            <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
                                 -10%
                             </Typography>
 
-                            <Typography variant="h7" color="blue-gray" className="mb-1">
+                            <Typography variant="h6" color="blue-gray" className="mb-1">
                                 Since last day
                             </Typography>
                         </div>

@@ -3,11 +3,10 @@ import {
     Navbar,
     Typography,
     IconButton,
-    Button,
     Input,
 } from "@material-tailwind/react";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
-function Navbar({ theme }) {
+function MainNavbar({ theme }) {
     return (
         <Navbar
 
@@ -47,4 +46,4 @@ function Navbar({ theme }) {
         </Navbar>
     );
 }
-export default Navbar
+export default MainNavbar

@@ -6,10 +6,10 @@ import Roi from "./tiles/roi";
 import Webscore from "./tiles/webscore";
 import CustomerChurn from "./tiles/customerchurn";
 
-export default function Maincontent() {
+function Maincontent() {
   return (
     <div className="flex flex-wrap justify-evenly p-4">
-      <WebSiteTraffic/>
+      <WebSiteTraffic />
       <FullReport />
       <Bouncerate />
       <Roi />
@@ -19,3 +19,4 @@ export default function Maincontent() {
     </div>
   );
 }
+export default Maincontent

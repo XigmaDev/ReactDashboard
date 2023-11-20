@@ -9,14 +9,9 @@ import {
     MenuHandler,
     MenuList,
     MenuItem,
-    Avatar,
-    Tooltip,
-    Progress,
 } from "@material-tailwind/react";
 import {
     EllipsisVerticalIcon,
-    ArrowUpIcon,
-    CheckCircleIcon,
 } from "@heroicons/react/24/outline";
 export default function Bouncerate() {
 

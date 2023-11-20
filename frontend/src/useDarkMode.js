@@ -5,7 +5,7 @@ const useDarkMode = () => {
 
     const toggleTheme = () => {
 
-        if (theme == 'light') {
+        if (theme === 'light') {
             window.localStorage.setItem('theme', 'dark')
             setTheme('dark')
         } else {

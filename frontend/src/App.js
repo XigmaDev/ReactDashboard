@@ -1,8 +1,8 @@
 import React from "react";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/Layout/Sidebar";
 import Maincontent from "./components/Layout/Maincontent";
 import useDarkMode from "./useDarkMode";
-import MainNavbar from "./components/Navbar/Navbar";
+import MainNavbar from "./components/Layout/Navbar";
 
 
 function Dashboard() {

@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function WebSiteTraffic() {
+function WebSiteTraffic() {
 
 
     return (
@@ -51,3 +51,4 @@ export default function WebSiteTraffic() {
         </div >
     );
 }
+export default WebSiteTraffic

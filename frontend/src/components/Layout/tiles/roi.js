@@ -11,7 +11,7 @@ import {
     EyeIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Roi() {
+function Roi() {
 
 
     return (
@@ -55,3 +55,4 @@ export default function Roi() {
         </div>
     );
 }
+export default Roi

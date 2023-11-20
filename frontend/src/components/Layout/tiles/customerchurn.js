@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 
 
-export default function CustomerChurn() {
+function CustomerChurn() {
 
 
     return (
@@ -35,3 +35,4 @@ export default function CustomerChurn() {
         </div>
     );
 }
+export default CustomerChurn

@@ -49,7 +49,6 @@ function Sidebar({ theme, toggleTheme }) {
                             <PresentationChartBarIcon className="h-5 w-5" />
                         </ListItemPrefix>
                         Dashboard
-
                     </ListItem>
                     <ListItem>
                         <ListItemPrefix>
@@ -120,5 +119,4 @@ function Sidebar({ theme, toggleTheme }) {
         </Card >
     );
 }
-
 export default Sidebar

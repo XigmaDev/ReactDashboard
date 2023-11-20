@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function FullReport() {
+function FullReport() {
 
 
     return (
@@ -31,3 +31,4 @@ export default function FullReport() {
         </div>
     );
 }
+export default FullReport

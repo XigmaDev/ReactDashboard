@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 
 
-export default function Webscore() {
+function Webscore() {
 
 
     return (
@@ -35,3 +35,4 @@ export default function Webscore() {
         </div>
     );
 }
+export default Webscore

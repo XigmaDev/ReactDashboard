@@ -13,7 +13,7 @@ import {
 import {
     EllipsisVerticalIcon,
 } from "@heroicons/react/24/outline";
-export default function Bouncerate() {
+function Bouncerate() {
 
 
     return (
@@ -105,3 +105,4 @@ export default function Bouncerate() {
         </div>
     );
 }
+export default Bouncerate

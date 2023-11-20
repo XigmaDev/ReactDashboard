@@ -11,13 +11,13 @@ export default function Dashboard() {
   };
 
   return (
-    <div className={`${isDarkMode ? 'dark' : ''} p-4`}>
-      <div className="flex m-0 font-sans antialiased font-normal text-base leading-default min-h-screen">
+    <div className={`${isDarkMode ? 'bg-gray-900' : ''} p-4 `}>
+      <div className=" flex m-0 font-sans antialiased font-normal text-base leading-default min-h-screen">
         <Sidebar
           isDarkMode={isDarkMode} onClick={toggleDarkMode}
         />
         <div className="w-5/6">
-          <NavbarDark />
+          <NavbarDark isDarkMode={isDarkMode} />
           <Maincontent />
         </div>
       </div>

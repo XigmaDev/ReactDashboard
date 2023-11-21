@@ -1,54 +1,154 @@
 import React from "react";
-
+import {
+    Typography,
+    Card,
+    CardHeader,
+    CardBody,
+    Button
+} from "@material-tailwind/react";
+import {
+    EllipsisVerticalIcon,
+} from "@heroicons/react/24/outline";
+import Chart from "react-apexcharts";
 
 function WebSiteTraffic() {
+    const chartdata = {
+        type: "donut",
+        height: 200,
+        width: 320,
+        series: [78, 22],
+        options: {
+            legend: {
+                show: false,
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        labels: {
+                            show: false,
+                            name: {
+
+                            },
+                            value: {
+
+                            }
+                        }
+                    }
+                }
+            },
+            chart: {
+                toolbar: {
+                    show: false,
+                },
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            fill: {
+                opacity: 0.9,
+                colors: ['#000000', '#A9A9A9']
+            },
+            tooltip: {
+                theme: "dark",
+            },
+            markers: {
+                colors: ['#000000', '#A9A9A9']
+             },
+        },
+    };
 
 
     return (
-        <div className="bg-yellow-300 p-4 rounded-3xl shadow-md w-96 mb-4 h-96 mr-3 flex flex-col justify-between">
-            <div className="flex flex-wrap ">
-                <h2 className="text-2xl text-slate-950 font-bold font-sans p-4">Website traffic</h2>
-                <a className="py-3 text-sm  my-3 mx-4 flex px-4 transition-colors" href="#">
-                    <span className="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">More</span>
-                </a>
-            </div>
-            <div className="flex flex-wrap p-4 w-80 justify-center">
-                <div className="relative w-20 h-20">
-                    <svg className="absolute" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50%" cy="50%" r="45%" fill="transparent" stroke="#e0e0e0" strokeWidth="0%" />
-                        <circle
-                            cx="50%"
-                            cy="50%"
-                            r="45%"
-                            fill="transparent"
-                            stroke="#111111"
-                            strokeWidth="10%"
-                            strokeDasharray="60% 100%"
-                            transform="rotate(-90) translate(-100%)"
-                        />
-                    </svg>
-                    <div className="absolute w-full h-full flex items-center justify-center">
-                        <span className="text-lg font-bold text-black">12K</span>
+        <div className=" rounded-3xl shadow-md w-96 mb-4  mr-3">
+            <Card shadow={true} className="bg-yellow-500 p-4 h-96 overflow-hidden xl:col-span-2 border border-blue-gray-100 shadow-sm flex flex-col justify-between">
+                <CardHeader
+                    floated={false}
+                    shadow={false}
+                    color="transparent"
+                    className="m-0 flex items-center justify-between p-6"
+                >
+                    <div>
+                        <Typography variant="h4" color="blue-gray" className="mb-1">
+                            Website traffic
+                        </Typography>
+
                     </div>
-                </div>
-            </div>
-            <div className="flex flex-wrap p-2 w-80 justify-between">
-                <div className="flex items-center">
-                    <div className="shadow-soft-2xl h-8 w-8 items-center justify-center rounded-lg bg-black bg-center inline-block"></div>
-                    <p className="mx-3 inline-block">Social Media</p>
-                </div>
-                <p className="mx-3">78%</p>
-            </div>
-            <hr></hr>
-            <div className="flex flex-wrap p-2 w-80 justify-between">
-                <div className="flex items-center">
-                    <div className="shadow-soft-2xl  h-8 w-8 items-center justify-center rounded-lg bg-gray-800 bg-center inline-block">
+                    <Button
+                        size="sm"
+                        color="black"
+                        variant="text"
+                        className="!absolute top-4 right-6 rounded-full"
+                    >
+                        More
+                    </Button>
+                </CardHeader>
+                <CardBody className="px-0 pt-0 pb-2 ">
+                    <div className="flex flex-row justify-center p-4">
+                        <div>
+                            <Chart {...chartdata} />
+                        </div>
                     </div>
-                    <p className="mx-3 text-left ">Organic Search</p>
-                </div>
-                <p className="text-right mx-3">22%</p>
-            </div>
-        </div >
+                    <div className="flex flex-row justify-between m-4 ">
+                        <div className="flex flex-col justify-center">
+                            <div className="flex flex-row justify-between w-80 px-4 py-2">
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold flex flex-row justify-between">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={2}
+                                        stroke="currentColor"
+                                        className="h-5 w-5 mr-3"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                                        />
+                                    </svg>
+                                    Social Media
+                                </Typography>
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
+                                    78%
+                                </Typography>
+                            </div>
+                            <hr className="w-80"></hr>
+                            <div className="flex flex-row justify-between w-80 px-4 py-2">
+
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold flex flex-row justify-between">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={2}
+                                        stroke="currentColor"
+                                        className="h-5 w-5 mr-3"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                                        />
+                                    </svg>
+                                    Organic Search
+                                </Typography>
+                                <Typography variant="h6" color="blue-gray" className="mb-1 font-bold">
+                                    22%
+                                </Typography>
+                            </div>
+                        </div>
+                    </div>
+                </CardBody>
+            </Card>
+        </div>
     );
 }
 export default WebSiteTraffic

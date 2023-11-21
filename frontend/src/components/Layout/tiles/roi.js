@@ -95,13 +95,13 @@ function Roi() {
                     "Oct",
                     "Nov",
                     "Dec",
-                  ],
+                ],
             },
         },
     };
 
     return (
-        <div className=" rounded-3xl shadow-md w-96 mb-4  mr-3">
+        <div className="rounded-3xl shadow-md w-96 mb-4  mr-3">
             <Card shadow={true} variant="gradient" className="bg-gray-800 p-4 h-96 overflow-hidden xl:col-span-2 border border-blue-gray-100 shadow-sm flex flex-col justify-between">
                 <CardHeader
                     floated={false}

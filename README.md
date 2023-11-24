@@ -1,7 +1,6 @@
 
 ![build](https://github.com/aliaskarii/admin-dashboard/actions/workflows/pages.yml/badge.svg)
-![Latest Tag](https://img.shields.io/github/v/tag/aliaskarii/admin-dashboard?label=Latest%20Tag&sort=semver)
-![Latest Release](https://img.shields.io/github/v/release/aliaskarii/admin-dashboard?display_name=tag&label=Latest%20Release&sort=semver)
+[![NPM](https://img.shields.io/npm/v/admin-dashboard.svg)]
 ![Code Size](https://img.shields.io/github/languages/code-size/aliaskarii/admin-dashboard?label=Code%20Size)
 ![License](https://img.shields.io/github/license/aliaskarii/admin-dashboard?label=License)
 

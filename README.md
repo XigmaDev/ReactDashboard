@@ -1,3 +1,13 @@
+
+![build](https://github.com/aliaskarii/admin-dashboard/actions/workflows/pages.yml/badge.svg)
+![Latest Tag](https://img.shields.io/github/v/tag/aliaskarii/admin-dashboard?label=Latest%20Tag&sort=semver)
+![Latest Release](https://img.shields.io/github/v/release/aliaskarii/admin-dashboard?display_name=tag&label=Latest%20Release&sort=semver)
+![Code Size](https://img.shields.io/github/languages/code-size/aliaskarii/admin-dashboard?label=Code%20Size)
+![License](https://img.shields.io/github/license/aliaskarii/admin-dashboard?label=License)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

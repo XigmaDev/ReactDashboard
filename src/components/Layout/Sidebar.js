@@ -22,16 +22,15 @@ function Sidebar({ theme, toggleTheme, data }) {
   return (
     <Card
       variant="gradient"
-      className={`${
-        theme === 'dark'
-          ? 'bg-gray-900 text-white shadow-inherit'
-          : 'text-black shadow-blue-gray-900/5'
+      className={`${theme === 'dark'
+        ? 'bg-gray-900 text-white shadow-inherit'
+        : 'text-black shadow-blue-gray-900/5'
       } flex flex-col justify-between items-center h-[calc(100vh-2rem)] w-full max-w-[20rem] p-8 shadow-xl  `}
     >
       <div className="flex flex-col items-center gap-4">
         <div className="mb-2 flex items-center gap-4 p-4">
           <img
-            src={`${theme === 'dark' ? ' ./img/logo.png' : './img/logo.png '}`}
+            src={`${theme === 'dark' ? ' ./img/logo-light.png' : './img/logo-dark.png '}`}
             alt="brand"
             className="h-8 w-8"
           />
@@ -47,8 +46,7 @@ function Sidebar({ theme, toggleTheme, data }) {
         </Typography>
         <Button
           variant="outlined"
-          className={`${
-            theme === 'dark' ? '  border-white' : ' '
+          className={`${theme === 'dark' ? '  border-white' : ' '
           }text-black rounded-full flex flex-row justify-between bg-blue-gray-200 opacity-40`}
         >
           <svg
@@ -78,7 +76,7 @@ function Sidebar({ theme, toggleTheme, data }) {
           <ListItem>
             <ListItemPrefix>
               <svg
-                className="h-5 w-5"
+                className={`${theme === 'dark' ? 'fill-white' : ''} h-5 w-5`}
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
                 viewBox="0 0 448 512"
@@ -143,9 +141,9 @@ function Sidebar({ theme, toggleTheme, data }) {
     </Card>
   )
 }
-Sidebar.propTypes={
-  theme:propTypes.string,
-  toggleTheme:propTypes.func,
-  data:propTypes.object
+Sidebar.propTypes = {
+  theme: propTypes.string,
+  toggleTheme: propTypes.func,
+  data: propTypes.object
 }
 export default Sidebar

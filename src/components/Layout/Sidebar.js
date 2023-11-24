@@ -14,6 +14,7 @@ import {
   Cog6ToothIcon,
 } from '@heroicons/react/24/solid'
 import { CubeTransparentIcon } from '@heroicons/react/24/outline'
+import propTypes from 'prop-types'
 
 function Sidebar({ theme, toggleTheme, data }) {
   const [openAlert, setOpenAlert] = useState(true)
@@ -141,5 +142,10 @@ function Sidebar({ theme, toggleTheme, data }) {
       </Alert>
     </Card>
   )
+}
+Sidebar.propTypes={
+  theme:propTypes.string,
+  toggleTheme:propTypes.func,
+  data:propTypes.object
 }
 export default Sidebar

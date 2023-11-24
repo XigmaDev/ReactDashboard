@@ -6,18 +6,17 @@ import {
   Input,
 } from '@material-tailwind/react'
 import { BellIcon, Cog6ToothIcon } from '@heroicons/react/24/solid'
+import propTypes from 'prop-types'
 function MainNavbar({ theme }) {
   return (
     <Navbar
       shadow={false}
       fullWidth={true}
-      className={`${
-        theme === 'dark' ? 'bg-gray-900 ' : ''
+      className={`${theme === 'dark' ? 'bg-gray-900 ' : ''
       }mx-auto px-2 py-3 border-none`}
     >
       <div
-        className={`${
-          theme === 'dark' ? ' text-white' : 'text-black '
+        className={`${theme === 'dark' ? ' text-white' : 'text-black '
         } flex flex-wrap items-center justify-between gap-y-4`}
       >
         <Typography
@@ -55,5 +54,8 @@ function MainNavbar({ theme }) {
       </div>
     </Navbar>
   )
+}
+MainNavbar.propTypes = {
+  theme: propTypes.string
 }
 export default MainNavbar

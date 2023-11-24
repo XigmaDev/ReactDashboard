@@ -5,6 +5,7 @@ import Bouncerate from './tiles/bouncerate'
 import Roi from './tiles/roi'
 import Webscore from './tiles/webscore'
 import CustomerChurn from './tiles/customerchurn'
+import propTypes from 'prop-types'
 
 function Maincontent({ data }) {
   return (
@@ -17,5 +18,8 @@ function Maincontent({ data }) {
       <CustomerChurn />
     </div>
   )
+}
+Maincontent.propTypes = {
+  data: propTypes.object
 }
 export default Maincontent

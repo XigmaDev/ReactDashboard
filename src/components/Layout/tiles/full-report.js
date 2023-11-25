@@ -1,40 +1,52 @@
 import React from 'react'
+import {
+  Typography,
+  Card,
+  CardHeader,
+  CardBody,
+  Button,
+  Menu,
+} from '@material-tailwind/react'
 
 function FullReport() {
   return (
-    <div className="bg-gray-800 p-4 rounded-3xl shadow-md w-96 mb-4 h-96 mr-3 flex flex-col justify-between bg-[url('./img/grunge-texture.png')] bg-cover">
-      <div className="px-6 py-4 flex flex-wrap justify-between">
-        <div className="text-white text-2xl font-semibold mb-2 p-4 ">
-          Full Report
-        </div>
-        <a
-          className="py-3 text-sm  my-3 mx-4  px-4 transition-colors inline-block"
-          href="#"
+    <div className="rounded-3xl shadow-md w-96 mb-4  mr-3 ">
+      <Card
+        shadow={true}
+        className="bg-gray-800 p-4 h-96 overflow-hidden xl:col-span-2 border border-blue-gray-100 shadow-sm flex flex-col justify-between bg-[url('./img/grunge-texture.png')] bg-cover"
+      >
+        <CardHeader
+          floated={false}
+          shadow={false}
+          color="transparent"
+          className="m-0 flex items-center justify-between p-6"
         >
-          <span className="text-yellow-300 ml-1 duration-300 opacity-100 pointer-events-none ease-soft ">
-            / 2023
-          </span>
-        </a>
-      </div>
-      <div className="">
-        <button className="w-full h-20 text-sm flex justify-between items-center text-white bg-slate-600 font-semibold rounded-2xl border border-slate-400 hover:text-white hover:bg-gray-700 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
-          <p className="px-2 font-bold text-xl ">Download Report</p>
-          <svg
-            className="h-5 w-5 mr-2 border-l border-white pl-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-        </button>
-      </div>
+          <div>
+            <Typography variant="h4" color="white" className="mb-1">
+              Bounce Rate
+            </Typography>
+          </div>
+          <Menu placement="left-start">
+            <Button
+              size="lg"
+              color="yellow"
+              variant="text"
+              className="!absolute top-4 right-6 rounded-full"
+            >
+              /2023
+            </Button>
+          </Menu>
+        </CardHeader>
+        <CardBody className="overflow-x-scroll px-6 pt-0 pb-2 ">
+          <Button size="lg" fullWidth={true} color="gray">
+            <div className='flex flex-row justify-between h-10 items-center'>
+              Download Report
+              <div className="border-l-2 border-gray-600 h-20 "></div>
+              <svg className='fill-white' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" /></svg>
+            </div>
+          </Button>
+        </CardBody>
+      </Card>
     </div>
   )
 }

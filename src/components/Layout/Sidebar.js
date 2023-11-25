@@ -21,7 +21,7 @@ function Sidebar({ theme, toggleTheme, data ,openSidenav }) {
     <aside
       className={`${theme === 'dark'
         ? 'bg-gray-900 text-white shadow-inherit'
-        : 'text-black shadow-blue-gray-900/5 shadow-sm'
+        : 'bg-white text-black shadow-blue-gray-900/5 shadow-sm'
       }
     ${openSidenav ? 'translate-x-0' : '-translate-x-80'
     } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-8 shadow-xl rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 flex flex-col justify-between items-center`}

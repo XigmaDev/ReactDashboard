@@ -22,8 +22,8 @@ function MainNavbar({ theme, setOpenSidenav ,openSidenav}) {
         <Typography
           as="a"
           href="#"
-          variant="h6"
-          className="mr-4 ml-2 cursor-pointer py-1.5"
+          variant="h4"
+          className="font-bold mr-4 ml-2 cursor-pointer py-1.5"
         >
           Statistics
         </Typography>

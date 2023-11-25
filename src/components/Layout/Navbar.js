@@ -5,9 +5,9 @@ import {
   IconButton,
   Input,
 } from '@material-tailwind/react'
-import { BellIcon, Cog6ToothIcon } from '@heroicons/react/24/solid'
+import { BellIcon, Cog6ToothIcon, Bars3Icon } from '@heroicons/react/24/solid'
 import propTypes from 'prop-types'
-function MainNavbar({ theme }) {
+function MainNavbar({ theme, setOpenSidenav ,openSidenav}) {
   return (
     <Navbar
       shadow={false}
@@ -50,12 +50,22 @@ function MainNavbar({ theme }) {
           >
             <BellIcon className="h-4 w-4" />
           </IconButton>
+          <IconButton
+            variant="text"
+            color="blue-gray"
+            className="grid xl:hidden"
+            onClick={() => setOpenSidenav(!openSidenav)}
+          >
+            <Bars3Icon strokeWidth={3} className="h-6 w-6 text-blue-gray-500" />
+          </IconButton>
         </div>
       </div>
     </Navbar>
   )
 }
 MainNavbar.propTypes = {
-  theme: propTypes.string
+  theme: propTypes.string,
+  setOpenSidenav: propTypes.func,
+  openSidenav: propTypes.bool
 }
 export default MainNavbar

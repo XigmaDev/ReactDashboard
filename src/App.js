@@ -7,7 +7,7 @@ import useDarkMode from './useDarkMode'
 function Dashboard() {
   const [theme, toggleTheme] = useDarkMode()
   const [profile, setProfile] = useState(null)
-
+  const [openSidenav, setOpenSidenav] = useState(false)
   useEffect(() => {
     fetch('https://randomuser.me/api')
       .then((res) => res.json())
@@ -27,9 +27,9 @@ function Dashboard() {
   return (
     <div className={`${theme === 'dark' ? 'bg-gray-900' : ''} p-4 `}>
       <div className="flex m-0 font-sans antialiased font-normal text-base leading-default min-h-screen">
-        <Sidebar theme={theme} toggleTheme={toggleTheme} data={profile} />
-        <div className="w-5/6">
-          <MainNavbar theme={theme} />
+        <Sidebar theme={theme} toggleTheme={toggleTheme} data={profile} openSidenav={openSidenav}/>
+        <div className="xl:ml-80">
+          <MainNavbar theme={theme} setOpenSidenav={setOpenSidenav} openSidenav={openSidenav} />
           <Maincontent data={profile} />
         </div>
       </div>

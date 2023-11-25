@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {
-  Card,
   Typography,
   List,
   ListItem,
@@ -16,16 +15,16 @@ import {
 import { CubeTransparentIcon } from '@heroicons/react/24/outline'
 import propTypes from 'prop-types'
 
-function Sidebar({ theme, toggleTheme, data }) {
+function Sidebar({ theme, toggleTheme, data ,openSidenav }) {
   const [openAlert, setOpenAlert] = useState(true)
-
   return (
-    <Card
-      variant="gradient"
+    <aside
       className={`${theme === 'dark'
         ? 'bg-gray-900 text-white shadow-inherit'
-        : 'text-black shadow-blue-gray-900/5'
-      } flex flex-col justify-between items-center h-[calc(100vh-2rem)] w-full max-w-[20rem] p-8 shadow-xl  `}
+        : 'text-black shadow-blue-gray-900/5 shadow-sm'
+      }
+    ${openSidenav ? 'translate-x-0' : '-translate-x-80'
+    } fixed inset-0 z-50 my-4 ml-4 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-8 shadow-xl rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 flex flex-col justify-between items-center`}
     >
       <div className="flex flex-col items-center gap-4">
         <div className="mb-2 flex items-center gap-4 p-4">
@@ -138,12 +137,13 @@ function Sidebar({ theme, toggleTheme, data }) {
           </Typography>
         </div>
       </Alert>
-    </Card>
+    </aside>
   )
 }
 Sidebar.propTypes = {
   theme: propTypes.string,
   toggleTheme: propTypes.func,
-  data: propTypes.object
+  data: propTypes.object,
+  openSidenav:propTypes.bool
 }
 export default Sidebar

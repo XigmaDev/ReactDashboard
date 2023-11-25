@@ -23,7 +23,7 @@ function FullReport() {
         >
           <div>
             <Typography variant="h4" color="white" className="mb-1">
-              Bounce Rate
+              Full Report
             </Typography>
           </div>
           <Menu placement="left-start">

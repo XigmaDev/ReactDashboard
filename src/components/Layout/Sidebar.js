@@ -29,7 +29,7 @@ function Sidebar({ theme, toggleTheme, data ,openSidenav }) {
       <div className="flex flex-col items-center gap-4">
         <div className="mb-2 flex items-center gap-4 p-4">
           <img
-            src={`${theme === 'dark' ? 'logo.png' : 'logo.png '}`}
+            src="https://docs.material-tailwind.com/img/logo-ct-dark.png"
             alt="brand"
             className="h-8 w-8"
           />

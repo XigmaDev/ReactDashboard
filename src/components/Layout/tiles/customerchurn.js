@@ -6,18 +6,19 @@ import {
   CardBody,
 } from '@material-tailwind/react'
 import Chart from 'react-apexcharts'
+import propTypes from 'prop-types'
 
-function CustomerChurn() {
+
+function CustomerChurn({ seriesData }) {
+  const series = [{
+    name: 'customerchurn',
+    data: seriesData
+  }]
   const chartdata = {
     type: 'bar',
     height: 280,
     width: 320,
-    series: [
-      {
-        name: 'money',
-        data: [10, 14, 6, 8],
-      },
-    ],
+
     options: {
       chart: {
         toolbar: {
@@ -104,10 +105,13 @@ function CustomerChurn() {
           </div>
         </CardHeader>
         <CardBody className="px-0 pt-0 pb-0 ">
-          <Chart {...chartdata} />
+          <Chart {...chartdata} series={series} />
         </CardBody>
       </Card>
     </div>
   )
+}
+CustomerChurn.propTypes={
+  seriesData:propTypes.array
 }
 export default CustomerChurn

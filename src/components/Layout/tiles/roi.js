@@ -7,22 +7,21 @@ import {
   Button,
 } from '@material-tailwind/react'
 import Chart from 'react-apexcharts'
-
+import propTypes from 'prop-types'
 import { EyeIcon } from '@heroicons/react/24/outline'
 
-function Roi() {
-
+function Roi({ roiData }) {
+  const series = [
+    {
+      name: 'ROI',
+      data: roiData
+    },
+  ]
 
   const chartdata = {
     type: 'line',
     height: 200,
     width: 320,
-    series: [
-      {
-        name: 'money',
-        data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
-      },
-    ],
     options: {
       chart: {
         toolbar: {
@@ -138,13 +137,17 @@ function Roi() {
             </Typography>
           </div>
           <div>
-            <Chart               
-              {...chartdata}     
+            <Chart
+              {...chartdata}
+              series={series}
             />
           </div>
         </CardBody>
       </Card>
     </div>
   )
+}
+Roi.propTypes={
+  roiData:propTypes.array
 }
 export default Roi

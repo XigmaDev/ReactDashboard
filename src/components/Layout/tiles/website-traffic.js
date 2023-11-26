@@ -7,13 +7,13 @@ import {
   Button,
 } from '@material-tailwind/react'
 import Chart from 'react-apexcharts'
-
-function WebSiteTraffic() {
+import propTypes from 'prop-types'
+function WebSiteTraffic({ trafficdata }) {
+  const series = trafficdata
   const chartdata = {
     type: 'donut',
     height: 200,
     width: 320,
-    series: [78, 22],
     options: {
       legend: {
         show: false,
@@ -89,7 +89,7 @@ function WebSiteTraffic() {
         <CardBody className="px-0 pt-0 pb-2 ">
           <div className="flex flex-row justify-center p-4">
             <div>
-              <Chart {...chartdata} />
+              <Chart {...chartdata} series={series} />
             </div>
           </div>
           <div className="flex flex-row justify-between m-4 ">
@@ -116,7 +116,7 @@ function WebSiteTraffic() {
                   color="blue-gray"
                   className="mb-1 font-bold"
                 >
-                  78%
+                  {trafficdata[0]}%
                 </Typography>
               </div>
               <hr className="w-80"></hr>
@@ -143,7 +143,7 @@ function WebSiteTraffic() {
                   color="blue-gray"
                   className="mb-1 font-bold"
                 >
-                  22%
+                  {trafficdata[1]}%
                 </Typography>
               </div>
             </div>
@@ -152,5 +152,8 @@ function WebSiteTraffic() {
       </Card>
     </div>
   )
+}
+WebSiteTraffic.propTypes={
+  trafficdata:propTypes.array
 }
 export default WebSiteTraffic

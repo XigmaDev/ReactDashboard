@@ -40,13 +40,13 @@ function MainNavbar({ theme, setOpenSidenav ,openSidenav}) {
         <div className="ml-auto flex gap-1 md:mr-4">
           <IconButton
             variant="text"
-            color={`${theme === 'dark' ? 'white' : 'black'}`}
+            color={`${theme === 'dark' ? 'white' : 'gray'}`}
           >
             <Cog6ToothIcon className="h-4 w-4 " />
           </IconButton>
           <IconButton
             variant="text"
-            color={`${theme === 'dark' ? 'white' : 'black'}`}
+            color={`${theme === 'dark' ? 'white' : 'gray'}`}
           >
             <BellIcon className="h-4 w-4" />
           </IconButton>

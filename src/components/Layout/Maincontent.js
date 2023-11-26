@@ -7,19 +7,21 @@ import Webscore from './tiles/webscore'
 import CustomerChurn from './tiles/customerchurn'
 import propTypes from 'prop-types'
 
-function Maincontent({ data }) {
+function Maincontent({ seriesData, trafficdata ,roiData }) {
   return (
     <div className="flex flex-wrap justify-evenly p-4">
-      <WebSiteTraffic />
+      <WebSiteTraffic trafficdata={trafficdata} />
       <FullReport />
       <Bouncerate />
-      <Roi data={data} />
+      <Roi roiData={roiData} />
       <Webscore />
-      <CustomerChurn />
+      <CustomerChurn seriesData={seriesData} />
     </div>
   )
 }
 Maincontent.propTypes = {
-  data: propTypes.object
+  seriesData: propTypes.array,
+  trafficdata: propTypes.array,
+  roiData:propTypes.array
 }
 export default Maincontent

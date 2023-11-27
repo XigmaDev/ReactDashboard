@@ -11,6 +11,24 @@ function Dashboard() {
   const [trafficdata, setTrafficdata] = useState([22, 78])
   const [roiData, setRoidata] = useState([50, 40, 300, 320, 500, 350, 200, 230, 500])
   const [seriesData, setSeriesData] = useState([25, 4, 20, 15])
+
+  // "symbol": "BTCUSDT",
+  // "interval": "1M",
+  // "startTime": "2021-11",
+  // "endTime": "2023-11",
+  // "limit": 500,
+  useEffect(() => {
+    fetch('https://api.binance.us/api/v3/klines?interval=1M&symbol=BTCUSDT&limit=8')
+      .then((res) => res.json())
+      .then((data) => {
+        const array = []
+        for (let index = 0; index < data.length; index++) {
+          array.push(data[index][4])
+        }
+        console.log(array)
+        setRoidata(array)
+      })
+  },[])
   useEffect(() => {
     fetch('https://randomuser.me/api')
       .then((res) => res.json())
@@ -29,7 +47,7 @@ function Dashboard() {
         }
         for (let i = 0; i < array.length; i++) {
           if (array[i] < 10) {
-            counter +=1
+            counter += 1
           }
         }
         console.log(counter)
@@ -37,8 +55,7 @@ function Dashboard() {
           array.unshift([0])
         }
         console.log(array)
-        setTrafficdata([parseInt((counter * 100) / array.length),parseInt(100-(counter * 100 / array.length))])
-        setRoidata(array)
+        setTrafficdata([parseInt((counter * 100) / array.length), parseInt(100 - (counter * 100 / array.length))])
         setSeriesData([array[0], array[1], array[2], array[3]])
 
       })

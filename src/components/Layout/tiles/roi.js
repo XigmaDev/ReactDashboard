@@ -11,6 +11,7 @@ import propTypes from 'prop-types'
 import { EyeIcon } from '@heroicons/react/24/outline'
 
 function Roi({ roiData }) {
+  const price =  parseInt(((roiData[7] - roiData[0]) / roiData[0]) * 100)
   const series = [
     {
       name: 'ROI',
@@ -123,14 +124,14 @@ function Roi({ roiData }) {
           <div className="flex flex-row justify-between">
             <EyeIcon className="flex w-7 h-7"></EyeIcon>
             <Typography variant="h4" color="white" className="flex mb-1 ml-3">
-              ROI
+              BitCoin
             </Typography>
           </div>
         </CardHeader>
         <CardBody className="px-0 pt-0 pb-0">
           <div className="p-2">
             <Typography variant="h2" color="white" className="mb-1">
-              283%
+              {price} %
             </Typography>
             <Typography variant="h6" color="gray" className="mb-1">
               Return On Investment
@@ -147,7 +148,7 @@ function Roi({ roiData }) {
     </div>
   )
 }
-Roi.propTypes={
-  roiData:propTypes.array
+Roi.propTypes = {
+  roiData: propTypes.array
 }
 export default Roi

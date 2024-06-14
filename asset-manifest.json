@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ReactDashboard/static/css/main.0ce8c144.css",
+    "main.js": "/ReactDashboard/static/js/main.3295e22d.js",
+    "static/js/787.cda612ba.chunk.js": "/ReactDashboard/static/js/787.cda612ba.chunk.js",
+    "static/media/grunge-texture.png": "/ReactDashboard/static/media/grunge-texture.887d484c2bebe1dd3940.png",
+    "index.html": "/ReactDashboard/index.html",
+    "main.0ce8c144.css.map": "/ReactDashboard/static/css/main.0ce8c144.css.map",
+    "main.3295e22d.js.map": "/ReactDashboard/static/js/main.3295e22d.js.map",
+    "787.cda612ba.chunk.js.map": "/ReactDashboard/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ce8c144.css",
+    "static/js/main.3295e22d.js"
+  ]
+}
